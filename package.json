@@ -1,5 +1,5 @@
 {
-  "name": "commerce",
+  "name": "storedog",
   "license": "MIT",
   "private": true,
   "workspaces": [
