@@ -1,24 +1,35 @@
 import * as React from 'react';
 
+export interface AdDataResults {
+    data: object | null
+    path: string
+}
 // Advertisement banner
 function Ad() {
-  const [data, setData] = React.useState(null)
+  const [data, setData] = React.useState<AdDataResults | null>(null)
   const [isLoading, setLoading] = React.useState(false)
 
-  function getRandomArbitrary(min, max) {
+  function getRandomArbitrary(min: number, max:number) {
     return Math.floor(Math.random() * (max - min) + min);
   }
 
+  function fetchAd() {
+      fetch('http://localhost:7676/ads')
+          .then((res) => res.json())
+          .then((data) => {
+              const index = getRandomArbitrary(0,data.length);
+              setData(data[index])
+          })
+          .catch(e => console.error(e.message))
+          .finally(() => {
+              setLoading(false)
+          })
+  }
+
   React.useEffect(() => {
-    setLoading(true)
-    fetch('http://localhost:7676/ads')
-      .then((res) => res.json())
-      .then((data) => {
-        const index = getRandomArbitrary(0,data.length);
-        setData(data[index])
-        setLoading(false)
-      })
-  }, [])
+      setLoading(true)
+      fetchAd()
+  }, [data?.path])
 
   if (isLoading) return (
     <div className="flex flex-row justify-center h-10">
