@@ -7,13 +7,14 @@ export interface DiscountCodeResults {
 function Discount() {
   const [data, setData] = React.useState<DiscountCodeResults | null>(null)
   const [isLoading, setLoading] = React.useState(false)
+  const discountPath = `${process.env.NEXT_PUBLIC_DISCOUNTS_ROUTE}:${process.env.NEXT_PUBLIC_DISCOUNTS_PORT}`
 
   function getRandomArbitrary(min: number, max: number) {
     return Math.floor(Math.random() * (max - min) + min);
   }
 
   function fetchDiscountCode() {
-      fetch('http://localhost:2814/discount')
+      fetch(`${discountPath}/discount`)
           .then((res) => res.json())
           .then((data) => {
               const index = getRandomArbitrary(0,data.length);
@@ -42,7 +43,7 @@ function Discount() {
 
   return (
     <div className="flex flex-row justify-center h-10">
-      GET FREE SHIPPING WITH DISCOUNT CODE &nbsp; <b>{data}</b>
+    GET FREE SHIPPING WITH DISCOUNT CODE &nbsp; <b>{data}</b>
     </div>
   )
 }
