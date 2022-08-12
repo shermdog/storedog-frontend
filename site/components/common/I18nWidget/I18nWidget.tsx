@@ -50,6 +50,7 @@ const I18nWidget: FC = () => {
           onClick={() => setDisplay(!display)}
         >
           <button className={s.button} aria-label="Language selector">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               width="20"
               height="20"

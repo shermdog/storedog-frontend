@@ -17,6 +17,7 @@ export const useUserAvatar = (name = 'userAvatar') => {
       localStorage.setItem(name, value)
       setUserAvatar(value)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return {

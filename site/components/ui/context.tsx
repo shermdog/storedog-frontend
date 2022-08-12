@@ -195,7 +195,8 @@ export const UIProvider: FC = (props) => {
       setSidebarView,
       setUserAvatar,
     }),
-    [state]
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      [state]
   )
 
   return <UIContext.Provider value={value} {...props} />
