@@ -16,7 +16,7 @@ import { datadogRum } from '@datadog/browser-rum';
 
 const onMockCheckout = async () => {
 
-  const sleep = (ms: number) => {
+  const sleep = (ms) => {
     return new Promise((resolve) => {
       setTimeout(resolve, ms);
     });

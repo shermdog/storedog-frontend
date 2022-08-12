@@ -47,7 +47,6 @@ function Ad() {
     <div className="flex flex-row justify-center py-4">
       <picture>
         <source srcSet={`http://localhost:7676/banners/${data.path}`} type="image/webp" />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={`http://localhost:7676/banners/${data.path}`} alt="Landscape picture" />
       </picture>
     </div>
