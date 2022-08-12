@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {AdDataResults} from "@components/common/Ad/Ad";
 
 export interface DiscountCodeResults {
     data: string | null
