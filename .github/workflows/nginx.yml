@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - site/**
+      - packages/nginx/**
   workflow_dispatch:
     branches: [ main ]
 
