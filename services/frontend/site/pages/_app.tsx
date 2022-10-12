@@ -29,7 +29,7 @@ datadogRum.init({
   trackInteractions: true,
   trackFrustrations: true,
   defaultPrivacyLevel: 'mask-user-input',
-  allowedTracingOrigins: [/https:\/\/.*\.env.play.instruqt\.com/],
+  allowedTracingOrigins: [/http(?:s*):\/\/.*(?:\:*)/]
 });
 
 datadogRum.startSessionReplayRecording();
