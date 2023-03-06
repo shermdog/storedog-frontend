@@ -1,4 +1,4 @@
-FROM node:lts as builder
+FROM node:16 as builder
 
 # Update, upgrade, and cleanup debian packages
 RUN export DEBIAN_FRONTEND=noninteractive && \

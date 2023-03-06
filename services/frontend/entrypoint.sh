@@ -17,7 +17,7 @@ export DISCOUNTS_PORT="${DISCOUNTS_PORT:-2814}"
 
 export DD_SITE="${DD_SITE:-"datadoghq.com"}"
 export DD_SERVICE="${DD_SERVICE:-"frontend"}"
-export DD_VERSION="${DD_VERSION:-"1.0.0"}"
+export DD_VERSION="${DD_VERSION:-"1.0.2"}"
 export DD_ENV="${DD_ENV:-"development"}"
 
 # Render env template

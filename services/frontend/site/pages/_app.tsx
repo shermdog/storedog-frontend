@@ -29,7 +29,8 @@ datadogRum.init({
   trackInteractions: true,
   trackFrustrations: true,
   defaultPrivacyLevel: 'mask-user-input',
-  allowedTracingOrigins: [/http(?:s*):\/\/.*(?:\:*)/]
+  allowedTracingOrigins: [/http(?:s*):\/\/.*(?:\:*)/],
+  enableExperimentalFeatures: ['clickmap']
 });
 
 datadogRum.startSessionReplayRecording();
