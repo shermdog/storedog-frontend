@@ -1,0 +1,23 @@
+---
+schema-version: v2
+dd-service: store-frontend
+team: web
+contacts:
+  - type: slack
+    contact: https://exampleincidents.slack.com/archives/C01EWN6319S
+links:
+  - name: Common Operations
+    type: runbook
+    url: https://examplehq.atlassian.net/wiki/
+repos:
+  - name: Source
+    provider: github
+    url: https://github.com/shermdog/storedog-frontend/tree/runtime-params
+docs:
+  - name: Deployment Information
+    provider: link
+    url: https://docs.datadoghq.com/
+  - name: Partner Contracts
+    provider: link
+    url: https://docs.datadoghq.com/
+tags: []
